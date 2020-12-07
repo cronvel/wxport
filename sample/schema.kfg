@@ -1,7 +1,4 @@
 
-# https://meraki.cisco.com/product/MS120-8
-# remove -HW -LP -FP
-
 sanitizers: @@sanitizers.js
 
 collections:
@@ -10,7 +7,7 @@ collections:
 		properties:
 			title:
 				selector: h2
-			amount:
+			price:
 				selector: .price .amount
 				sanitize: fromFrPrice
 
