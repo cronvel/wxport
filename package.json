@@ -1,0 +1,53 @@
+{
+  "name": "wxport",
+  "version": "0.3.5",
+  "description": "Export from the web to a structured to JSON.",
+  "main": "lib/WXport.js",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "wxport": "./bin/wxport"
+  },
+  "dependencies": {
+    "terminal-kit": "^1.44.0",
+    "utterminal": "^0.5.44"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "tea-time -R dot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cronvel/wxport.git"
+  },
+  "keywords": [
+    "export",
+    "web",
+    "json",
+    "crawler",
+    "scrap"
+  ],
+  "author": "Cédric Ronvel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cronvel/wxport/issues"
+  },
+  "config": {
+    "tea-time": {
+      "coverDir": [
+        "lib"
+      ]
+    }
+  },
+  "copyright": {
+    "title": "WXport",
+    "years": [
+      2020
+    ],
+    "owner": "Cédric Ronvel"
+  }
+}
