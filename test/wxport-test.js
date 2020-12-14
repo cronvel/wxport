@@ -67,6 +67,13 @@ describe( "Expression parser" , () => {
 		expect( expression ).to.be.like( { selector: 'div.content h1', transform: [ { fn: "toLowerCase" , args: [] } ] } ) ;
 
 		expect( () => Expression.parse( "div.content h1 | toLowerCase trash" ) ).to.throw.a( SyntaxError ) ;
+
+		// Transform function allowed characters
+		expression = Expression.parse( "div.content h1 | some-func_name2" ) ;
+		expect( expression ).to.be.an( Expression ) ;
+		expect( expression ).to.be.like( { selector: 'div.content h1', transform: [ { fn: "some-func_name2" , args: [] } ] } ) ;
+
+		expect( () => Expression.parse( "div.content h1 | 2bad" ) ).to.throw.a( SyntaxError ) ;
 	} ) ;
 
 	it( "Parse an expression with a transform with one argument" , () => {
