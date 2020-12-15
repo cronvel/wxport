@@ -184,5 +184,18 @@ describe( "Expression parser" , () => {
 			{ fn: "someOtherFunc" , args: [ 123.456 , 'arg3' , null , -0.123 ] }
 		] } ) ;
 	} ) ;
+
+	it( "Parse an expression of a static string" , () => {
+		var expression ;
+
+		expression = Expression.parse( "||this is static!" ) ;
+		expect( expression ).to.be( "this is static!" ) ;
+
+		expression = Expression.parse( "||" ) ;
+		expect( expression ).to.be( "" ) ;
+
+		expression = Expression.parse( "|||" ) ;
+		expect( expression ).to.be( "|" ) ;
+	} ) ;
 } ) ;
 
