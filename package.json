@@ -1,6 +1,6 @@
 {
   "name": "wxport",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Export from the web to a structured to JSON.",
   "main": "lib/WXport.js",
   "engines": {
@@ -18,6 +18,7 @@
     "doormen": "^0.11.1",
     "fs-kit": "^0.6.1",
     "kung-fig": "^0.54.4",
+    "logfella": "^1.3.9",
     "minimatch": "^3.0.4",
     "seventh": "^0.7.40",
     "terminal-kit": "^1.44.0",
